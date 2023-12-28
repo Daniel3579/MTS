@@ -1,16 +1,16 @@
 package HW_3.Class;
 
 import HW_3.Abstract.Pet;
+
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 /**
- * <p>
- * Dog class extends Pet class
- * </p>
  * Stores dog fields and behavior
  */
 public class Dog extends Pet {
-    //Unique dog class field
+
+    // Unique dog class field
     private boolean uniqueDogField;
 
     /**
@@ -30,6 +30,26 @@ public class Dog extends Pet {
         this.character = character;
         this.friendIndex = friendIndex;
         this.uniqueDogField = uniqueDogField;
+    }
+
+    @Override
+    public String getBreed() {
+        return breed;
+    }
+
+    @Override
+    public String getName() {
+        return name;
+    }
+
+    @Override
+    public BigDecimal getCost() {
+        return cost.setScale(2, RoundingMode.HALF_UP);
+    }
+
+    @Override
+    public String getCharacter() {
+        return character;
     }
 
     @Override

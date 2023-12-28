@@ -2,17 +2,16 @@ package HW_3;
 
 import HW_3.Class.CreateAnimalServiceImpl;
 
-/**
- * Main class
- */
 public class Main {
 
     public static void main(String[] args) {
 
-        //Shows 10 unique animals (do while)
-        new CreateAnimalServiceImpl().showUniqueAnimals();
+        CreateAnimalServiceImpl createService = new CreateAnimalServiceImpl();
 
-        //Shows "n" unique animals (for)
-        new CreateAnimalServiceImpl().showUniqueAnimals(7);
+        // Shows 10 unique animals (do while)
+        createService.showUniqueAnimals();
+
+        // Shows "n" unique animals (for)
+        createService.showUniqueAnimals(7);
     }
 }

@@ -1,16 +1,16 @@
 package HW_3.Class;
 
 import HW_3.Abstract.Predator;
+
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 /**
- * <p>
- * Shark class extends Predator class
- * </p>
  * Stores shark fields and behavior
  */
 public class Shark extends Predator {
-    //Unique shark class field
+
+    // Unique shark class field
     private boolean uniqueSharkField;
 
     /**
@@ -30,6 +30,26 @@ public class Shark extends Predator {
         this.character = character;
         this.teethAmount = teethAmount;
         this.uniqueSharkField = uniqueSharkField;
+    }
+
+    @Override
+    public String getBreed() {
+        return breed;
+    }
+
+    @Override
+    public String getName() {
+        return name;
+    }
+
+    @Override
+    public BigDecimal getCost() {
+        return cost.setScale(2, RoundingMode.HALF_UP);
+    }
+
+    @Override
+    public String getCharacter() {
+        return character;
     }
 
     @Override

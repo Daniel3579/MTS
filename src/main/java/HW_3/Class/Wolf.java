@@ -1,16 +1,16 @@
 package HW_3.Class;
 
 import HW_3.Abstract.Predator;
+
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 /**
- * <p>
- * Wolf class extends Predator class
- * </p>
  * Stores wolf fields and behavior
  */
 public class Wolf extends Predator {
-    //Unique wolf class field
+
+    // Unique wolf class field
     private boolean uniqueWolfField;
 
     /**
@@ -30,6 +30,26 @@ public class Wolf extends Predator {
         this.character = character;
         this.teethAmount = teethAmount;
         this.uniqueWolfField = uniqueWolfField;
+    }
+
+    @Override
+    public String getBreed() {
+        return breed;
+    }
+
+    @Override
+    public String getName() {
+        return name;
+    }
+
+    @Override
+    public BigDecimal getCost() {
+        return cost.setScale(2, RoundingMode.HALF_UP);
+    }
+
+    @Override
+    public String getCharacter() {
+        return character;
     }
 
     @Override
