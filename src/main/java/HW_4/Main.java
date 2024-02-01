@@ -37,7 +37,7 @@ public class Main {
 
         // Shows duplicates
         System.out.println("Duplicates:");
-        searchService.findDuplicate(animals);
+        searchService.printDuplicate(animals);
     }
 
     public static void showAnimals(ArrayList<Animal> animals) {

@@ -2,6 +2,7 @@ package HW_4.Class;
 
 import HW_4.Interface.Animal;
 import HW_4.Interface.SearchService;
+import com.beust.ah.A;
 
 import java.time.LocalDate;
 import java.time.Period;
@@ -40,13 +41,22 @@ public class SearchServiceImpl implements SearchService {
 
     // Overridden method. Shows animal duplicates
     @Override
-    public void findDuplicate(ArrayList<Animal> animals) {
+    public ArrayList<Animal> findDuplicate(ArrayList<Animal> animals) {
         Set<Animal> set = new HashSet<>();
+        ArrayList<Animal> duplicates = new ArrayList<>();
 
         for (Animal animal: animals) {
             if (!set.add(animal)) {
-                System.out.println(animal);
+                duplicates.add(animal);
             }
+        }
+
+        return duplicates;
+    }
+
+    public void printDuplicate(ArrayList<Animal> animals) {
+        for (Animal animal: findDuplicate(animals)) {
+            System.out.println(animal);
         }
     }
 

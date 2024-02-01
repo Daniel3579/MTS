@@ -11,5 +11,5 @@ public interface SearchService {
     ArrayList<Animal> findOlderAnimal(ArrayList<Animal> animals, int n);
 
     // Shows animal duplicates
-    void findDuplicate(ArrayList<Animal> animals);
+    ArrayList<Animal> findDuplicate(ArrayList<Animal> animals);
 }
