@@ -2,7 +2,6 @@ package HW_4.Class;
 
 import HW_4.Interface.Animal;
 import HW_4.Interface.SearchService;
-import com.beust.ah.A;
 
 import java.time.LocalDate;
 import java.time.Period;
