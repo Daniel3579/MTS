@@ -23,7 +23,7 @@ import static org.testng.Assert.*;
 public class Tests {
 
     @Test
-    static public class Equals_Test {
+    public static class Equals_Test {
 
         CreateAnimalServiceImpl createService = new CreateAnimalServiceImpl();
 
@@ -92,7 +92,7 @@ public class Tests {
         }
     }
 
-    static public class Find_Test {
+    public static class Find_Test {
 
         SearchServiceImpl searchService = new SearchServiceImpl();
 
