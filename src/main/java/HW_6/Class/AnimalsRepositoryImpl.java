@@ -1,62 +1,70 @@
-package HW_4.Class;
+package HW_6.Class;
 
-import HW_4.Interface.Animal;
-import HW_4.Interface.SearchService;
+import HW_6.Interface.Animal;
+import HW_6.Interface.AnimalsRepository;
+import HW_6.Interface.CreateAnimalService;
+import org.springframework.beans.factory.annotation.Autowired;
 
+import javax.annotation.PostConstruct;
 import java.time.LocalDate;
 import java.time.Period;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
-public class SearchServiceImpl implements SearchService {
+public class AnimalsRepositoryImpl implements AnimalsRepository {
+
+    @Autowired
+    private CreateAnimalService createAnimalService;
+
+    public AnimalsRepositoryImpl() {
+    }
+
+    @PostConstruct
+    public void initialize() {
+        // CreateAnimalService filling animals
+        this.animals.addAll(createAnimalService.getUniqueAnimals());
+    }
 
     // Overridden method. Returns leap year animal names array
     @Override
-    public ArrayList<String> findLeapYearNames(ArrayList<Animal> animals) {
+    public String[] findLeapYearNames() {
         ArrayList<String> names = new ArrayList<>();
 
-        for (Animal animal: animals) {
+        for (Animal animal: this.animals) {
             if (isLeapYear(animal.getBirthday().getYear())) {
                 names.add(animal.getName());
             }
         }
-        return names;
+
+        return names.toArray(String[]::new);
     }
 
     // Overridden method. Returns older than "n" age animal array
     @Override
-    public ArrayList<Animal> findOlderAnimal(ArrayList<Animal> animals, int n) {
+    public Animal[] findOlderAnimal(int n) {
         ArrayList<Animal> result = new ArrayList<>();
 
-        for (Animal animal: animals) {
+        for (Animal animal: this.animals) {
             if (Period.between(animal.getBirthday(), LocalDate.now()).getYears() > n) {
                 result.add(animal);
             }
         }
 
-        return result;
+        return result.toArray(Animal[]::new);
     }
 
     // Overridden method. Shows animal duplicates
     @Override
-    public ArrayList<Animal> findDuplicate(ArrayList<Animal> animals) {
+    public Set<Animal> findDuplicate() {
         Set<Animal> set = new HashSet<>();
         ArrayList<Animal> duplicates = new ArrayList<>();
 
-        for (Animal animal: animals) {
+        for (Animal animal: this.animals) {
             if (!set.add(animal)) {
                 duplicates.add(animal);
             }
         }
 
-        return duplicates;
-    }
-
-    public void printDuplicate(ArrayList<Animal> animals) {
-        for (Animal animal: findDuplicate(animals)) {
-            System.out.println(animal);
-        }
+        return new HashSet<>(duplicates);
     }
 
     // Checks leap year
