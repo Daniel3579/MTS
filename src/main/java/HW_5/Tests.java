@@ -9,20 +9,18 @@ import HW_4.Enum.DogBreeds;
 import HW_4.Enum.Names;
 import HW_4.Interface.Animal;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
-import org.testng.annotations.Test;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-import static org.testng.Assert.*;
-
 public class Tests {
 
-    @Test
     public static class Equals_Test {
 
         CreateAnimalServiceImpl createService = new CreateAnimalServiceImpl();
