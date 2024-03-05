@@ -1,7 +1,7 @@
 package HW_8.repository.impl;
 
-import HW_8.animal.Animal;
-import HW_8.service.CreateAnimalService;
+import HW_9.animal.Animal;
+import HW_9.service.CreateAnimalService;
 import org.springframework.stereotype.Repository;
 import HW_8.repository.AnimalRepository;
 
@@ -13,6 +13,7 @@ import java.util.*;
 @Repository
 public class AnimalsRepositoryImpl implements AnimalRepository {
     private List<Animal> animals;
+    List<Map<String, List<Animal>>> animalDic;
     private final CreateAnimalService animalService;
 
     public AnimalsRepositoryImpl(CreateAnimalService createAnimalService) {
@@ -21,7 +22,7 @@ public class AnimalsRepositoryImpl implements AnimalRepository {
 
     @PostConstruct
     private void postConstruct() {
-        animals = List.of(animalService.createUniqueAnimals());
+        animalDic = List.of(animalService.createUniqueAnimals());
     }
 
     /**

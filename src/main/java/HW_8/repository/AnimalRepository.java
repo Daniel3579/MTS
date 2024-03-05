@@ -1,6 +1,6 @@
 package HW_8.repository;
 
-import HW_8.animal.Animal;
+import HW_9.animal.Animal;
 
 import java.util.Map;
 
@@ -18,8 +18,7 @@ public interface AnimalRepository {
      * При помощи цикла for находит всех
      * животных, возраст которых больше N лет
      *
-     *
-     * @param N       Возраст, выше которого нужно найти
+     * @param N Возраст, выше которого нужно найти
      * @return Массив подходящих животных
      */
     Animal[] findOlderAnimal(int N);
