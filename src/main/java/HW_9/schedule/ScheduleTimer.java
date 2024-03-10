@@ -1,6 +1,6 @@
 package HW_9.schedule;
 
-import HW_10.animal.Animal;
+import ru.mts.animal.Animal;
 import org.springframework.context.annotation.Profile;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;

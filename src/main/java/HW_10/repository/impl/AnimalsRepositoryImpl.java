@@ -1,9 +1,9 @@
 package HW_10.repository.impl;
 
-import org.springframework.stereotype.Repository;
-import HW_10.animal.Animal;
 import HW_10.repository.AnimalRepository;
-import HW_10.service.CreateAnimalService;
+import org.springframework.stereotype.Repository;
+import ru.mts.animal.Animal;
+import ru.mts.service.CreateAnimalService;
 
 import javax.annotation.PostConstruct;
 import java.math.BigDecimal;

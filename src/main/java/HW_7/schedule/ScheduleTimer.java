@@ -4,7 +4,7 @@ import HW_7.repository.impl.AnimalsRepositoryImpl;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
-import HW_10.animal.Animal;
+import ru.mts.animal.Animal;
 
 @Component
 @EnableScheduling

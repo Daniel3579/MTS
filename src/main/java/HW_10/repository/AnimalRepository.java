@@ -1,6 +1,6 @@
 package HW_10.repository;
 
-import HW_10.animal.Animal;
+import ru.mts.animal.Animal;
 
 import java.time.LocalDate;
 import java.util.List;

@@ -1,7 +1,7 @@
 package HW_8.repository.impl;
 
-import HW_10.animal.Animal;
-import HW_10.service.CreateAnimalService;
+import ru.mts.animal.Animal;
+import ru.mts.service.CreateAnimalService;
 import org.springframework.stereotype.Repository;
 import HW_8.repository.AnimalRepository;
 

@@ -1,8 +1,8 @@
 package HW_9.repository.impl;
 
-import HW_10.animal.Animal;
+import ru.mts.animal.Animal;
 import HW_9.repository.AnimalRepository;
-import HW_10.service.CreateAnimalService;
+import ru.mts.service.CreateAnimalService;
 import org.springframework.stereotype.Repository;
 
 import javax.annotation.PostConstruct;
