@@ -1,11 +1,11 @@
 package HW_9.schedule;
 
-import HW_9.animal.Animal;
+import HW_9.repository.impl.AnimalsRepositoryImpl;
+import ru.mts.animal.Animal;
 import org.springframework.context.annotation.Profile;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
-import HW_9.repository.impl.AnimalsRepositoryImpl;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
