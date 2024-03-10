@@ -1,4 +1,4 @@
-package ru.mts.hw6.animal.impl;
+package ru.mts.animal.impl;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;

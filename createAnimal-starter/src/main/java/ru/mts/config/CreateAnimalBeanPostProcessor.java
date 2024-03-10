@@ -1,10 +1,10 @@
-package ru.mts.hw6.config;
+package ru.mts.config;
 
 
+import ru.mts.service.CreateAnimalService;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.lang.Nullable;
-import ru.mts.hw6.service.CreateAnimalService;
 
 public class CreateAnimalBeanPostProcessor implements BeanPostProcessor {
     @Nullable

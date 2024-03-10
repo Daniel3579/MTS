@@ -1,11 +1,11 @@
-package ru.mts.hw6.config;
+package ru.mts.config;
 
+import ru.mts.factory.AnimalFactory;
+import ru.mts.service.CreateAnimalService;
+import ru.mts.service.impl.CreateAnimalServiceImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
-import ru.mts.hw6.factory.AnimalFactory;
-import ru.mts.hw6.service.CreateAnimalService;
-import ru.mts.hw6.service.impl.CreateAnimalServiceImpl;
 
 @Configuration
 public class SpringConfig {

@@ -1,10 +1,10 @@
-package ru.mts.hw6.schedule;
+package HW_7.schedule;
 
+import ru.mts.animal.Animal;
+import HW_7.repository.impl.AnimalsRepositoryImpl;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
-import ru.mts.hw6.animal.Animal;
-import ru.mts.hw6.repository.impl.AnimalsRepositoryImpl;
 
 @Component
 @EnableScheduling

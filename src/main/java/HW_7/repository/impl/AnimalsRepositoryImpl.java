@@ -1,9 +1,9 @@
-package ru.mts.hw6.repository.impl;
+package HW_7.repository.impl;
 
+import ru.mts.service.CreateAnimalService;
 import org.springframework.stereotype.Repository;
-import ru.mts.hw6.animal.Animal;
-import ru.mts.hw6.repository.AnimalRepository;
-import ru.mts.hw6.service.CreateAnimalService;
+import ru.mts.animal.Animal;
+import HW_7.repository.AnimalRepository;
 
 import javax.annotation.PostConstruct;
 import java.time.LocalDate;

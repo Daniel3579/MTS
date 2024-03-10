@@ -1,6 +1,6 @@
-package ru.mts.hw6.repository;
+package HW_7.repository;
 
-import ru.mts.hw6.animal.Animal;
+import ru.mts.animal.Animal;
 
 import java.util.Map;
 

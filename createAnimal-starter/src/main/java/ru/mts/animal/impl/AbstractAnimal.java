@@ -1,6 +1,6 @@
-package ru.mts.hw6.animal.impl;
+package ru.mts.animal.impl;
 
-import ru.mts.hw6.animal.Animal;
+import ru.mts.animal.Animal;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;

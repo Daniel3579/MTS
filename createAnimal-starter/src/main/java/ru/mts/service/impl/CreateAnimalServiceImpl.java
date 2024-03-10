@@ -1,13 +1,12 @@
-package ru.mts.hw6.service.impl;
+package ru.mts.service.impl;
 
+import ru.mts.animal.Animal;
+import ru.mts.factory.AnimalFactory;
+import ru.mts.factory.AnimalTypes;
+import ru.mts.service.CreateAnimalService;
 import org.springframework.stereotype.Service;
-import ru.mts.hw6.animal.Animal;
-import ru.mts.hw6.factory.AnimalFactory;
-import ru.mts.hw6.service.CreateAnimalService;
 
 import java.util.concurrent.ThreadLocalRandom;
-
-import static ru.mts.hw6.factory.AnimalTypes.*;
 
 @Service
 public class CreateAnimalServiceImpl implements CreateAnimalService {
@@ -77,13 +76,13 @@ public class CreateAnimalServiceImpl implements CreateAnimalService {
     private Animal createRandomAnimal() {
         switch (ThreadLocalRandom.current().nextInt(1, 4)) {
             case 1:
-                return animalFactory.getAnimal(WOLF);
+                return animalFactory.getAnimal(AnimalTypes.WOLF);
             case 2:
-                return animalFactory.getAnimal(SHARK);
+                return animalFactory.getAnimal(AnimalTypes.SHARK);
             case 3:
-                return animalFactory.getAnimal(DOG);
+                return animalFactory.getAnimal(AnimalTypes.DOG);
             case 4:
-                return animalFactory.getAnimal(CAT);
+                return animalFactory.getAnimal(AnimalTypes.CAT);
             default:
                 throw new IllegalStateException("Wrong ENUM type");
         }

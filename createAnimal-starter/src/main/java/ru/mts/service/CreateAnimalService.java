@@ -1,11 +1,11 @@
-package ru.mts.hw6.service;
+package ru.mts.service;
 
-import ru.mts.hw6.animal.Animal;
-import ru.mts.hw6.factory.AnimalFactory;
+import ru.mts.animal.Animal;
+import ru.mts.factory.AnimalFactory;
 
 import java.util.concurrent.ThreadLocalRandom;
 
-import static ru.mts.hw6.factory.AnimalTypes.*;
+import static ru.mts.factory.AnimalTypes.*;
 
 /**
  * Интерфейс создания

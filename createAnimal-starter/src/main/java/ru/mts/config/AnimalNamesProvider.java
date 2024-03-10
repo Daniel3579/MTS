@@ -1,4 +1,4 @@
-package ru.mts.hw6.config;
+package ru.mts.config;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;

@@ -1,13 +1,12 @@
-package ru.mts.hw6.factory;
+package ru.mts.factory;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import ru.mts.animal.impl.Cat;
+import ru.mts.animal.impl.Shark;
+import ru.mts.animal.impl.Wolf;
 import org.springframework.stereotype.Component;
-import ru.mts.hw6.animal.Animal;
-import ru.mts.hw6.animal.impl.Cat;
-import ru.mts.hw6.animal.impl.Dog;
-import ru.mts.hw6.animal.impl.Shark;
-import ru.mts.hw6.animal.impl.Wolf;
-import ru.mts.hw6.config.AnimalNamesProvider;
+import ru.mts.animal.Animal;
+import ru.mts.animal.impl.Dog;
+import ru.mts.config.AnimalNamesProvider;
 
 import java.time.LocalDate;
 import java.time.Month;
