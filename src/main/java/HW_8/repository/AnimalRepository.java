@@ -1,6 +1,6 @@
 package HW_8.repository;
 
-import HW_8.animal.Animal;
+import ru.mts.animal.Animal;
 
 import java.util.Map;
 
